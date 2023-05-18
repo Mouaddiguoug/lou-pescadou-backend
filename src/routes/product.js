@@ -16,7 +16,7 @@ const {
 const {findUserById} =  require('../controllers/user');
 const {requireSignIn, isAuth, isAdmin} =  require('../controllers/auth');
 
-router.post('/product/create/:userId', requireSignIn, isAuth, isAdmin, create);
+router.post('/product/create', requireSignIn, isAuth, isAdmin, create);
 router.get('/product/:productId', read);
 router.get('/products', list);
 router.get('/products/search', listSearch);

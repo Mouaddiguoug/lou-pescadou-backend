@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const {ObjectId} = mongoose.Schema;
 
 const productSchema = new mongoose.Schema({
-    name: {
+    title: {
         type: String,
         trim: true,
         required: true,
@@ -35,10 +35,6 @@ const productSchema = new mongoose.Schema({
         data: Buffer,
         contentType: String
     },
-    shipping: {
-        required: false,
-        type: Boolean
-    }
 }, {
     timestamps: true
 });

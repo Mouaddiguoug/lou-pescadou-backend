@@ -7,9 +7,9 @@ const CartItemSchema = new mongoose.Schema({
         type: ObjectId,
         ref: "Product",
     },
-    name: String,
+    title: String,
     price: Number,
-    count: Number
+    quantity: Number,
 }, {
     timestamps: true
 });
@@ -27,7 +27,7 @@ const OrderSchema = new mongoose.Schema({
         type: String,
         default: "Not processed",
         // enum: string objects
-        enum: ["Not processed", "Shipped", "Delivered", "Cancelled"] 
+        enum: ["Not processed", "Shipped", "Delivered", "Cancelled"]
     },
     updated: Date,
     user: {
